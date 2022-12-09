@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        return (
+        <>
+        <h1>Golf Cohort: The Cohort Without a Nickname</h1>
+        <Content />
+        <Footer />
+        </>
+        )
+      }
+
+      const Content = () => {
+        return <ul>
+                    <li>James</li>
+                    <li>Sammy</li>
+                    <li>Octavio</li>
+                    <li>Romeo</li>
+                    <li>Dom</li>
+                    <li>Raquel</li>
+                    <li>Ney</li>
+                    <li>Bora</li>
+                    <li>Torin</li>
+                    <li>Dave</li>
+                    <li>Christian</li>
+                    <li>Lea</li>
+                    <li>Moss</li>
+                    <li>Natally</li>
+                    <li>Aileen</li>
+                    <li>Chris</li>
+                    <li>Fred</li>
+                    <li>Matt</li>
+                    <li>Monica</li>
+                    <li>Molly</li>
+                    <li>Oscar</li>
+                    <li>Raymond</li>
+                </ul>
+      }
+
+      const Footer = () => {
+        return <footer>&copy; 2022 - The Worst Webpage on the Internet - James Quillen</footer>
+      }
+
+      const domContainer = document.querySelector("#react-container")
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
+    </script>
+  </body>
+</html>
