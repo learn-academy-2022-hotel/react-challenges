@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        return ( 
+        <>
+            <h1>Hotel Cohort 2022</h1>
+            <Content />        
+          </>
+        )
+      }
+
+      const Content = () => {
+        return <h3> 
+        <ul>  
+            <li> Oscar </li>
+            <li> Dominque </li>
+            <li> Fred </li>
+            <li> Lea </li>
+            <li> Matt </li>
+            <li> Natallly </li>
+            <li> Ney </li>
+            <li> James </li>
+            <li> Bo </li>
+            <li> Molly </li>
+            <li> Romeo </li>
+            <li> Raymond </li>
+            <li> Sammy </li>
+            <li> Dave </li>
+            <li> Christian </li>
+            <li> Monica </li>
+            <li>Chris </li>
+            <li> Octavio </li>
+            <li> Aileen </li>
+            <li> Raquel </li>
+        </ul>
+            </h3>
+      }
+
+      const domContainer = document.querySelector("#react-container")
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
+    </script>
+  </body>
+  <footer>
+    <p>Author: Oscar GomezBarragan</p>
+  </footer>
+</html>
