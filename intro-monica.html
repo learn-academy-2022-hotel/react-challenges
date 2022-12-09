@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        return(
+        <>
+        < Cohort />
+        < ClassList />
+        < Footer />
+        </>
+        )
+    }
+    
+    const Cohort = () => {
+        return <h1>Hotel Cohort 2022</h1>
+    }
+
+    const ClassList = () => {
+        return <>
+        <ul>Monica</ul>
+        <ul>Aileen</ul>
+        <ul>Bora</ul>
+        <ul>Chris</ul>
+        <ul>Christian</ul>
+        <ul>Dave</ul>
+        <ul>Ney</ul>
+        <ul>Natally</ul>
+        <ul>Romeo</ul>
+        <ul>Molly</ul>
+        <ul>Fred</ul>
+        <ul>James</ul>
+        <ul>Raymond</ul>
+        <ul>Matt</ul>
+        <ul>Sammy</ul>
+        <ul>Oscar</ul>
+        <ul>Dave</ul>
+        <ul>Octavio</ul>
+        <ul>Lea</ul>
+        <ul>Dominque</ul>
+        <ul>Raquel</ul>
+        <ul>Torin</ul>
+        <ul>Moss</ul>
+        </>
+    }
+ 
+      const Footer = () => {
+        return <h2>Monica Arganda</h2>
+      }
+
+      const domContainer = document.querySelector("#react-container")
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
+    </script>
+  </body>
+</html>
