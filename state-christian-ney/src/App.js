@@ -7,7 +7,9 @@ function App() {
   white
     <li className="button">
     </li>
+    <button class="basicButton" id="btnChoice1"></button>
     </div>
+      
   );
 }
 
