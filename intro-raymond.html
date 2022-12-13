@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        return (
+            <>
+                <h1>Hotel Cohort</h1>
+                <Content/>
+    
+            </>
+        )
+      }
+      const Content = () => {
+        return (
+            <>
+            <h3>Ney</h3>      
+            <h3>Natally</h3>
+            <h3>Romeo</h3>
+            <h3>Molly</h3>
+            <h3>Fred</h3>
+            <h3>James</h3>
+            <h3>Bo</h3>
+            <h3>Matt</h3>
+            <h3>Sammy</h3>
+            <h3>Oscar</h3>
+            <h3>Dave</h3>
+            <h3>Christian</h3>
+            <h3>Monica</h3>
+            <h3>Chris</h3>
+            <h3>Octavio</h3>
+            <h3>Lea</h3>
+            <h3>Aileen</h3>
+            <h3>Dominque</h3>
+            <h3>Raquel</h3>
+            <h3>Nicole</h3>
+            <h3>Charlean</h3>
+            <h3>Trish</h3>
+            </>
+        )
+      }
+      const footer = () => {
+          return ( <>
+          <h4>Raymond</h4>
+          </>
+          )
+      }
+      const domContainer = document.querySelector("#react-container")
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
+      </script>
+  </body>
+  </html>
