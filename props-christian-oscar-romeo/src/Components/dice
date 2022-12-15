@@ -1,0 +1,9 @@
+// const dice = (props) => {
+//   // console.log(props) - props is an object
+//   return (
+//     <>
+//       <h3>Dice:{props.}</h3>
+//       <button onClick={props.}>Next Roll</button>
+//     </>
+//   )
+// }
