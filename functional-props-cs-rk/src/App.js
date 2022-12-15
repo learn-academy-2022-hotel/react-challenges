@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import FoodItem from './Components/FoodItem';
 
-function App() {
+// food ordering app//
+  // Give a variable to listed food items
+  // give the variable (foodname) food items
+  // 
+const App = () => {
+  const [menu, setMenu] = useState([
+    { name: "steak"},
+    { name: "cornBread" },
+    { name: "bristket" },
+    { name: "potatos" }
+  ])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <h1>BBQ KINGS</h1>
+    <h3>Menu"</h3>
+    {menu.map((menu, index) => {
+      return <foodItem menu={menu} key={index} />
+    })}
+  </>
+)
 }
+
+
+
+// return (
+//   <>
+//   <h1>BBQ KINGS</h1>
+//   <h3>Menu</h3>
+//   {menu.map ( (item) => {
+//   return(
+//   <FoodItem foodItem={item}/>
+//   )
+// }
+// ) }
+// </>
+//  );
+// }
 
 export default App;
