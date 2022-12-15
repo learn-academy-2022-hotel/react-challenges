@@ -1,0 +1,13 @@
+import React from "react"
+
+const foodItem = (props) => {
+  return (
+    <>
+      <p>Food listed: {props.menu.name}</p>
+      {props.menu }
+      <button>Order</button>
+    </>
+  )
+}
+
+export default FoodItem
