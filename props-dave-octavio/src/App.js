@@ -4,19 +4,16 @@ import Box from './components/Box'
 import Counter from './components/Counter'
 
 function App() {
-  let diceValues = [1, 2, 3, 4, 5, 6]
-  let rolls = []
-  const [currentDice, setCurrentDice] = useState(diceValues[0])
+  // let diceValues = [1, 2, 3, 4, 5, 6]
+  const [currentDice, setCurrentDice] = useState(1)
   const [rollList, setRollList] = useState([])
 
 
   const triggerNextDice = () => {
-    setCurrentDice(diceValues[Math.floor(Math.random() * diceValues.length)])
-    // rolls.push(currentDice)
-    // setRollList(current => [...current, currentDice])
-    // rollList.push(currentDice)
-    console.log(rollList);
-    console.log(rolls);
+    // setCurrentDice(diceValues[Math.floor(Math.random() * diceValues.length)])
+    setCurrentDice(Math.floor(Math.random() * 6))
+    setRollList([...rollList, currentDice])
+    // console.log("rollList", rollList);
   }
   
   
@@ -25,7 +22,7 @@ function App() {
       <div className="boxContainer">
       <Box triggerNextDice={triggerNextDice} currentDice={currentDice}/>
       {/* <img className="dice" src={diceValues[0]}></img> */}
-      <Counter />
+      <Counter rollList={rollList}/>
       </div>
     </>
   );

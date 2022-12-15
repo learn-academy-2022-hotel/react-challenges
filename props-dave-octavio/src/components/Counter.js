@@ -1,15 +1,12 @@
 import React from "react";
 
-
-
-const Counter = () => {
-    const recordArray = []
+const Counter = (props) => {
     return (
         <>
             <div>
                 <ul>
-                    {recordArray.map(number => {
-                        <li>{number}</li>
+                    {props.rollList.map(number => {
+                        return <li>{number}</li>
                     })}
 
                 </ul>
