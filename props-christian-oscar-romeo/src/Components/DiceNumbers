@@ -1,0 +1,6 @@
+const Diceroll = () => {
+   return Math.floor(Math.random()* 7)
+}
+console.log(Diceroll)
+
+export default DiceNumbers
