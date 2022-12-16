@@ -1,6 +1,7 @@
 import REACT, {useState} from 'react'
 import './App.css'
 import './components/MenuItems.js';
+import MenuItems from './components/MenuItems.js';
 
 // Challenge: Food Ordering App
 
@@ -25,27 +26,37 @@ import './components/MenuItems.js';
 const App = () => {
 
   const [menuItems, setMenuItems] = useState([
-    {name: "Steak"},
-    {name: "Chicken"},
-    {name: "Soup"},
-    {name: "Pasta"},
-    {name: "Veggies"},
+    {name: "Steak" ,orderItem: true, price: 18.99 },
+    {name: "Chicken",orderItem: false, price: 13.99 },
+    {name: "Soup",orderItem: true, price: 6.00 },
+    {name: "Pasta",orderItem: false, price: 10.00 },
+    {name: 'Veggies',orderItem: true, price: 5.00},
   ])
-  
-  return (
-    <>
-    <h1>Available menu items</h1>
-    <h3>Menu</h3>
-    {menuItems.map(value) => {
-      return(
-        <MenuItems
-          menuItems={value}
-        />
-      )
-      }
-  ) }
-  </>
-  );
-}
+  const orderItem =(selectedItem)=> {
+    menuItems[selectedItem].orderItem = true
+    setMenuItems([...menuItems])
+  }
 
+
+  return (
+   <>
+   <h1> Havana Rest </h1>
+   <h2>Menu</h2>
+   {menuItems.map((name, index, price)=> {
+    return(
+      <MenuItems
+      menuItems={name}
+      orderItem={orderItem}
+      index={index}
+      price={price}
+   /> 
+   )
+   }
+   )}
+  
+   
+   
+   </>
+  )
+  }
 export default App;
