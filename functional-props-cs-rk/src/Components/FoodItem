@@ -1,13 +1,18 @@
 import React from "react"
 
-const foodItem = (props) => {
+const foodItem = (props, name) => {
+  //console.log("props: ")
   return (
     <>
       <p>Food listed: {props.menu.name}</p>
-      {props.menu }
-      <button>Order</button>
+      {props.menu.ordered && <h4>FOOD NOT PURCHASED</h4> }
+     {/* {anonymous function}  */}
+      <button onClick={()=>{props}>Order</button>
     </>
   )
 }
 
 export default FoodItem
+
+
+

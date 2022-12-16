@@ -8,16 +8,33 @@ import FoodItem from './Components/FoodItem';
   // 
 const App = () => {
   const [menu, setMenu] = useState([
-    { name: "steak"},
-    { name: "cornBread" },
-    { name: "bristket" },
-    { name: "potatos" }
+    { name: "steak", bought: },
+    { name: "cornBrea", bought: },
+    { name: "bristket", bought: },
+    { name: "potatos", bought: }
   ])
   
+  const orderFoodItem =(selectedItem)=> {
+    menu[selectedItem].ordered = true
+    setMenu([...menu])
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
     <h1>BBQ KINGS</h1>
-    <h3>Menu"</h3>
+    <h3>"Menu"</h3>
     {menu.map((menu, index) => {
       return <foodItem menu={menu} key={index} />
     })}
