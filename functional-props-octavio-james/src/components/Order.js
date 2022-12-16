@@ -3,7 +3,7 @@
 const Order = (props) => {
     return (
         <>
-        <h3>Your Order:</h3>
+            <p>{props.value.item} Price: ${props.value.price.toFixed(2)}</p>
         </>
     )
 }
