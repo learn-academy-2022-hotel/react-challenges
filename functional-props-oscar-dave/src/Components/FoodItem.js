@@ -9,7 +9,9 @@ const FoodItem = (props) => {
         {props.foodItem.ordered && <p>Ordered!</p>}
         <button onClick={() => {props.orderMenuItem(props.index)}}>Order</button>
     </>
+  
   )
+      
 }
 
 export default FoodItem
