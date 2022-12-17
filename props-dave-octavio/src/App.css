@@ -1,0 +1,18 @@
+.boxContainer {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.box {
+  border: 2px solid black;
+  width: 550px;
+  height: 600px;
+  padding: 10px;
+  background-color: white;
+}
+
+.dice {
+  height: 100px;
+  width: 100px;
+}
